@@ -2,12 +2,11 @@
 # DESCRIPTION:    Image to build Atom and create a .rpm file
 
 # Base docker image
-FROM node:10
+FROM nodesource/fedora21:4.2.6
 
 # Install dependencies
 # RUN yum install -y \
 RUN rpm --rebuilddb && yum install -y \
-
     make \
     gcc \
     gcc-c++ \
